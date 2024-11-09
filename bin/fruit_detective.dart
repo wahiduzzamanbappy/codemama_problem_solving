@@ -1,3 +1,4 @@
+/*
 import 'dart:io';
 
 void main() {
@@ -20,4 +21,19 @@ void main() {
   } else {
     print('Invalid Fruit ID.');
   }
+}
+*/
+
+void main () {
+  var myList = [1,2,3,4,5,6];
+  print(myList);
+ /* myList.add(7);
+  print(myList);
+  myList.addAll([8,9,10]);
+  print(myList);*/
+  myList.insert(2, 0);
+  print(myList);
+  myList.insertAll(6, [8,9,10,11,12,13]);
+  print(myList);
+
 }
