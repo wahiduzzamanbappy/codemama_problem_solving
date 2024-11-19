@@ -55,8 +55,8 @@ void main() {
 */
 import 'dart:io';
 
-void main() {
-  List<String> input = stdin.readLineSync()!.split(' ');
+/*void main() {
+  *//*List<String> input = stdin.readLineSync()!.split(' ');
   int startTime = int.parse(input[0]);
   int endTime = int.parse(input[1]);
 
@@ -65,5 +65,33 @@ void main() {
       : endTime >= startTime
           ? endTime - startTime
           : (24 - startTime) + endTime;
+  print(duration);*//*
+  List <String> input = stdin.readLineSync()!.split('');
+  int startTime = int.parse(input[0]);
+  int endTime = int.parse(input[1]);
+  int duration = startTime == endTime? 24 : endTime >= startTime? endTime - startTime : (24 - startTime) + endTime;
+  print(duration);
+}*/
+import 'dart:io';
+
+void main() {
+  List<String> input = stdin.readLineSync()!.split(' ');
+  int startTime = int.parse(input[0]);
+  int endTime = int.parse(input[1]);
+
+  int duration;
+
+  if (startTime == endTime) {
+    // If the start and end times are the same, the duration is 24 hours
+    duration = 24;
+  } else if (endTime >= startTime) {
+    // If the end time is after or at the same time as the start time, calculate the direct difference
+    duration = endTime - startTime;
+  } else {
+    // If the end time is before the start time, calculate across midnight
+    duration = (24 - startTime) + endTime;
+  }
+
   print(duration);
 }
+
