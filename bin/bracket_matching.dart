@@ -15,7 +15,6 @@ bool isBalanced(String s) {
       }
     }
   }
-
   return stack.isEmpty;
 }
 
